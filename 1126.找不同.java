@@ -16,10 +16,19 @@ public class App {
     JLabel label_ceshi4=new JLabel();
     JLabel label_ceshi5=new JLabel();
     JLabel label_ceshi6=new JLabel();
-
+    JLabel label_cg=new JLabel();
     int a=0;
     //构造方法
     public App() {
+        myPanel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                System.out.println("坐标X:"+e.getX()+",坐标Y:"+e.getY()+"");
+            }
+        });
+
+
         label_ceshi.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -27,6 +36,13 @@ public class App {
 
                 if (!label_ceshi.getText().equals("恭喜恭喜好眼力！！")||!label_ceshi2.getText().equals("恭喜恭喜好眼力！！")){
                     a++;
+                }
+                if(a==3){
+                    label_cg.setOpaque(true);
+                    label_cg.setBackground(Color.YELLOW);
+                    label_cg.setText("恭喜老板！通过成功!!!");
+                    label_cg.setForeground(Color.red);
+                    label_cg.setFont(new Font("隶书",Font.BOLD,28));
                 }
                 label_ceshi.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.BLUE));
                 label_ceshi.setText("恭喜恭喜好眼力！！");
@@ -43,6 +59,13 @@ public class App {
                 if (!label_ceshi.getText().equals("恭喜恭喜好眼力！！")||!label_ceshi2.getText().equals("恭喜恭喜好眼力！！")){
                     a++;
                 }
+                if(a==3){
+                    label_cg.setOpaque(true);
+                    label_cg.setBackground(Color.YELLOW);
+                    label_cg.setText("恭喜老板！通过成功!!!");
+                    label_cg.setForeground(Color.red);
+                    label_cg.setFont(new Font("隶书",Font.BOLD,28));
+                }
                 label_ceshi.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.BLUE));
                 label_ceshi.setText("恭喜恭喜好眼力！！");
                 label_ceshi2.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.BLUE));
@@ -57,6 +80,13 @@ public class App {
                 super.mouseClicked(e);
                 if (!label_ceshi3.getText().equals("恭喜恭喜好眼力！！")||!label_ceshi4.getText().equals("恭喜恭喜好眼力！！")){
                     a++;
+                }
+                if(a==3){
+                    label_cg.setOpaque(true);
+                    label_cg.setBackground(Color.YELLOW);
+                    label_cg.setText("恭喜老板！通过成功!!!");
+                    label_cg.setForeground(Color.red);
+                    label_cg.setFont(new Font("隶书",Font.BOLD,28));
                 }
                 label_ceshi3.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.green));
                 label_ceshi3.setText("恭喜恭喜好眼力！！");
@@ -73,6 +103,13 @@ public class App {
                 if (!label_ceshi3.getText().equals("恭喜恭喜好眼力！！")||!label_ceshi4.getText().equals("恭喜恭喜好眼力！！")){
                     a++;
                 }
+                if(a==3){
+                    label_cg.setOpaque(true);
+                    label_cg.setBackground(Color.YELLOW);
+                    label_cg.setText("恭喜老板！通过成功!!!");
+                    label_cg.setForeground(Color.red);
+                    label_cg.setFont(new Font("隶书",Font.BOLD,28));
+                }
                 label_ceshi3.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.green));
                 label_ceshi3.setText("恭喜恭喜好眼力！！");
                 label_ceshi4.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.green));
@@ -88,6 +125,13 @@ public class App {
                 if (!label_ceshi5.getText().equals("恭喜恭喜好眼力！！")||!label_ceshi4.getText().equals("恭喜恭喜好眼力！！")){
                     a++;
                 }
+                if(a==3){
+                    label_cg.setOpaque(true);
+                    label_cg.setBackground(Color.YELLOW);
+                    label_cg.setText("恭喜老板！通过成功!!!");
+                    label_cg.setForeground(Color.red);
+                    label_cg.setFont(new Font("隶书",Font.BOLD,28));
+                }
                 label_ceshi5.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.red));
                 label_ceshi5.setText("恭喜恭喜好眼力！！");
                 label_ceshi6.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.red));
@@ -102,6 +146,13 @@ public class App {
                 super.mouseClicked(e);
                 if (!label_ceshi5.getText().equals("恭喜恭喜好眼力！！")||!label_ceshi6.getText().equals("恭喜恭喜好眼力！！")){
                     a++;
+                }
+                if(a==3){
+                    label_cg.setOpaque(true);
+                    label_cg.setBackground(Color.YELLOW);
+                    label_cg.setText("恭喜老板！通过成功!!!");
+                    label_cg.setForeground(Color.red);
+                    label_cg.setFont(new Font("隶书",Font.BOLD,28));
                 }
                 label_ceshi5.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.red));
                 label_ceshi5.setText("恭喜恭喜好眼力！！");
@@ -137,6 +188,10 @@ public class App {
         //        红块
         label_ceshi5.setBounds(400,500,100,120);
         label_ceshi6.setBounds(900,500,100,120);
+//成功
+
+        label_cg.setBounds(330,20,330,100);
+
 
 
         label_nb.setBounds(30,1,50,50);
@@ -147,6 +202,7 @@ public class App {
         frame.setContentPane(myPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(0,0,1000,687);
+        myPanel.add(label_cg);
         myPanel.add(label_ceshi5);
         myPanel.add(label_ceshi6);
         myPanel.add(label_ceshi4);
